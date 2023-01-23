@@ -27,7 +27,7 @@ class PostStoreRequest extends FormRequest
     public function rules()
     {
         return [
-            'title'   => 'required|unique:posts,title',
+            'title'   => 'required|unique:posts,title',$this->id,
             'content' => 'required|min:20',
             'author'  => 'nullable',
             'user_id' => 'nullable',
